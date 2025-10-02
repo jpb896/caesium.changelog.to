@@ -11,7 +11,7 @@ function generate_version_divider() {
                     </ul>
                 </div>
                 <div class="tab-pane" id="$tab_id">
-                    <h2>Android $tab_id</h2>
+                    <h2>CaesiumOS $tab_id</h2>
 
                     <ul>
 EOF
@@ -35,9 +35,14 @@ function generate_tag_list() {
 
 cat "${script_dir}/html_templates/index_header.html" > "$output_file"
 
+generate_version_divider "3"
 generate_tag_list "android-16"
 
-generate_version_divider "15"
+generate_version_divider "2"
+generate_tag_list "android-15"
+generate_tag_list "android-security-15"
+
+generate_version_divider "1"
 generate_tag_list "android-15"
 generate_tag_list "android-security-15"
 
